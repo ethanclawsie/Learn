@@ -10,7 +10,7 @@ Before you can use the Learn CLI, ensure that you have the following prerequisit
 
 1. **Download the Executable**
 
-   Visit the [Releases](https://github.com/yourusername/learn-cli/releases) section of this repository and download the appropriate binary for your operating system (e.g., `learn` for Unix-like systems or `learn.exe` for Windows).
+   Visit the [Releases](https://github.com/ethanclawsie/learn-cli/releases) section of this repository and download the appropriate binary for your operating system (e.g., `learn` for Unix-like systems or `learn.exe` for Windows).
 
 2. **Move the Executable**
 
