@@ -33,8 +33,19 @@ func main() {
 			config := loadConfig()
 			fileName := config.LastFilePath
 
-			// If the user didn't provide a file path, ask them for it.
-			if fileName == "" {
+			// Ask the user if they want to change the file location.
+			changeLocation := false
+			if fileName != "" {
+				fmt.Printf("Current file location: %s\n", fileName)
+				fmt.Print("Do you want to change the file location? (yes/no): ")
+				scanner := bufio.NewScanner(os.Stdin)
+				scanner.Scan()
+				answer := strings.ToLower(scanner.Text())
+				changeLocation = answer == "yes"
+			}
+
+			// If the user wants to change the file location or there is no saved location, ask for a new one.
+			if changeLocation || fileName == "" {
 				fmt.Print("Enter the full path to the text file (e.g., /path/to/terms.txt): ")
 				scanner := bufio.NewScanner(os.Stdin)
 				scanner.Scan()
